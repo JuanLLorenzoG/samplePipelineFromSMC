@@ -19,7 +19,7 @@ pipeline {
                 echo 'Testing.. no vamos2'
                 script{
                 def cowsay = load 'lib/cowsay.groovy'
-                cowsay.template("vamos!!!")
+                text = cowsay.template("vamos!!!")
                 echo text
                 }
             }
