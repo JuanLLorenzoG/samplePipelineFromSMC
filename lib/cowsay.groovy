@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('cowsay') _
+@Library('cowsay')
 def template(text) {
 """
 ${border(text, '_')}

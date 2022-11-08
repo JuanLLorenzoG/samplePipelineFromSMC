@@ -10,6 +10,7 @@ pipeline {
                 echo 'Building.. no vamos1'
                 def rootDir = pwd()
                 def example = load "${rootDir}/lib/cowsay.groovy"
+                example.execute("rasAlGhul")
             }
         }
         stage('Test') {
