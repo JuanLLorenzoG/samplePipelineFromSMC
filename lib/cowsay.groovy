@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
- 
+@Library('cowsay') _
 def template(text) {
 """
 ${border(text, '_')}
@@ -23,3 +23,5 @@ if (args.length == 1) {
 } else {
  println "Usage: cowsay [message]"
 }
+
+return this
