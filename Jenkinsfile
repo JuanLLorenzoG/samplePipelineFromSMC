@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Building.. no vamos1'
                 script{
-                def example = load '/lib/examples.groovy'
+                def example = load 'lib/examples.groovy'
                 example.example1()
                 }
             }
