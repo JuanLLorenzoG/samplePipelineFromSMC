@@ -9,9 +9,8 @@ pipeline {
             steps {
                 echo 'Building.. no vamos1'
                 script{
-                def rootDir = pwd()
-                def example = load "${rootDir}/lib/cowsay.groovy"
-                example.execute("rasAlGhul")
+                def example = load '/lib/examples.groovy'
+                example.example1()
                 }
             }
         }
