@@ -47,8 +47,9 @@ pipeline {
         azureKeyVault([[envVariable: 'MY_SECRET', name: 'dbuser', secretType: 'Secret']])
       }
       steps {
-          SecretValue = ${MY_SECRET} 
-          sh "echo ${SecretValue}"
+         /* SecretValue = ${MY_SECRET} 
+          sh "echo ${SecretValue}" */
+          sh "echo $MY_SECRET"
       }
     }
     stage('Print Key Vault Secret') {
