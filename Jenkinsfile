@@ -44,10 +44,10 @@ pipeline {
   stages {
     stage('Key Vault') {
       options {
-        azureKeyVault([[envVariable: 'MY_SECRET', name: 'test-secret', secretType: 'Secret']])
+        azureKeyVault([[envVariable: 'MY_SECRET', name: 'dbuser', secretType: 'Secret']])
       }
       steps {
-         /* SecretValue = ${MY_SECRET} */
+          SecretValue = ${MY_SECRET} 
           sh "echo ${SecretValue}"
       }
     }
